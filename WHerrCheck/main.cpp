@@ -45,7 +45,7 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 
 
     //Tworzenie okna
-    hWindow = CreateWindowEx(WS_EX_WINDOWEDGE, NazwaKlasy, "Cipy", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 400, 500, NULL, NULL, hInstance, NULL);
+    hWindow = CreateWindowEx(WS_EX_WINDOWEDGE, NazwaKlasy, "Œwinie", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 400, 500, NULL, NULL, hInstance, NULL);
     g_hButton = CreateWindowEx (0, "BUTTON", "Dupa", WS_CHILD|WS_VISIBLE, 20, 20, 90, 30, hWindow, NULL, hInstance, NULL);
     g_hButton2 = CreateWindowEx (0, "BUTTON", "Du¿a Dupa", WS_CHILD|WS_VISIBLE, 20, 60, 90, 30, hWindow, NULL, hInstance, NULL);
     hTextbox1 = CreateWindowEx( WS_EX_CLIENTEDGE, "EDIT", NULL, WS_CHILD | WS_VISIBLE | WS_BORDER |
