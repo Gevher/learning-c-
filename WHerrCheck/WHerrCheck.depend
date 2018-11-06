@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1541420466 source:c:\users\admin\desktop\wherrcheck\main.cpp
+	<tchar.h>
+	<windows.h>
+
