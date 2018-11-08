@@ -3,8 +3,20 @@
 	<tchar.h>
 	<windows.h>
 
-1541496797 source:c:\users\admin\documents\github\learning-c-\wherrcheck\main.cpp
+1541677443 source:c:\users\admin\documents\github\learning-c-\wherrcheck\main.cpp
 	<tchar.h>
 	<windows.h>
 	<cstdlib>
+	<iostream>
+	<ErrorCheckingProcess.h>
+
+1541677596 c:\users\admin\documents\github\learning-c-\wherrcheck\include\errorcheckingprocess.h
+	<tchar.h>
+	<windows.h>
+	<cstdlib>
+	<iostream>
+	<stdfix.h>
+
+1541677433 source:c:\users\admin\documents\github\learning-c-\wherrcheck\src\errorcheckingprocess.cpp
+	"ErrorCheckingProcess.h"
 

@@ -8,6 +8,7 @@
 #include <windows.h>
 #include <cstdlib>
 #include <iostream>
+#include <ErrorCheckingProcess.h>
 
 LPSTR NazwaKlasy = "Klasa Okienka";
 MSG Komunikat;
@@ -16,8 +17,8 @@ HWND g_hButton;
 HWND g_hButton2;
 HWND g_hExitButton;
 HWND hTextbox1;
-//handler okna konsoli
 HWND cmdhwnd;
+ErrorCheckingProcess errCheck;
 
 LRESULT CALLBACK WndProc( HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam );
 void HideConsole();
@@ -38,9 +39,10 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
     window1.lpszClassName = NazwaKlasy;
     window1.hIconSm = LoadIcon(NULL, IDI_APPLICATION);
 
+
     if(!RegisterClassEx(&window1))
     {
-        MessageBox(NULL, "Rejstracja zakoñczona niepowodzeniem", "Rejstracja", MB_ICONASTERISK|MB_OK);
+        MessageBox(NULL, "Rejstracja zakoÃ±czona niepowodzeniem", "Rejstracja", MB_ICONASTERISK|MB_OK);
         return 1;
     }
 
@@ -59,7 +61,7 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 
     if (hWindow == NULL || g_hButton == NULL)
     {
-        MessageBox (NULL, "Rozjeba³o", "Kapusta", MB_ICONERROR|MB_OKCANCEL);
+        MessageBox (NULL, "RozjebaÂ³o", "Kapusta", MB_ICONERROR|MB_OKCANCEL);
         return 1;
     }
     ShowWindow(hWindow, nCmdShow);
@@ -81,7 +83,6 @@ void HideConsole()
     GetConsoleTitleA(consoleName, 500);
     cmdhwnd = FindWindowA(NULL, consoleName);
     ShowWindow(cmdhwnd, SW_HIDE);
-    FreeConsole();
 }
 
 LRESULT CALLBACK WndProc( HWND hWindow, UINT msg, WPARAM wParam, LPARAM lParam)
@@ -94,17 +95,22 @@ LRESULT CALLBACK WndProc( HWND hWindow, UINT msg, WPARAM wParam, LPARAM lParam)
             case WM_DESTROY:
             PostQuitMessage(0);
             break;
-
             case WM_COMMAND:
                 if((HWND)lParam == g_hButton)
                     MessageBox( hWindow, "KURRRRWAAAAAA", "Ha!", MB_ICONINFORMATION );
-                else if((HWND)lParam == g_hButton2)
-                    MessageBox( hWindow, "ZNISZCZENIE", "Ha!", MB_ICONINFORMATION );
-            break;
+                    errCheck._tScreenShot();
 
+                if((HWND)lParam == g_hButton2)
+                    MessageBox( hWindow, "ZNISZCZENIE", "Ha!", MB_ICONINFORMATION );
+                else if((HWND)lParam == g_hExitButton)
+                {
+                    MessageBox( hWindow, "KoÅ„czenie programu", "Exit", MB_ICONERROR|MB_OK);
+                    DestroyWindow(hWindow);
+                }
+            break;
             default:
             return DefWindowProc( hWindow, msg, wParam, lParam);
         }
-        FreeConsole();
         return 0;
     }
+
