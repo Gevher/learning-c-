@@ -97,7 +97,7 @@ LRESULT CALLBACK WndProc( HWND hWindow, UINT msg, WPARAM wParam, LPARAM lParam)
             break;
             case WM_COMMAND:
                 if((HWND)lParam == g_hButton)
-                    MessageBox( hWindow, "KURRRRWAAAAAA", "Ha!", MB_ICONINFORMATION );
+                    //MessageBox( hWindow, "KURRRRWAAAAAA", "Ha!", MB_ICONINFORMATION );
                     errCheck._tScreenShot();
 
                 if((HWND)lParam == g_hButton2)
