@@ -1,11 +1,13 @@
 #include <iostream>
 #include <cstdlib>
 #include <time.h>
+#include <limits>
 
 using namespace std;
 
 
 void swapTwoValues (int*, int*);
+int intCheck ();
 
 void printArray (int[], int);
 int* createArray(int);
@@ -15,20 +17,25 @@ void bubbleSort (int[], int, int);
 void selectionSort(int[], int, int);
 
 
+
+
 int main ()
 {
     int sizeOfArray, sortDirection;
     string sortSelection;
+    bool valid= false;
 
     cout << "gib size" << endl;
-    cin >> sizeOfArray;
+    sizeOfArray = intCheck();
 
     int* randomArray = createArray(sizeOfArray);
     randomizeArray(randomArray, sizeOfArray);
     printArray(randomArray, sizeOfArray);
 
+
     cout << "gib sorting direction : \n(1 - incremental, 2 - decremental)" << endl;
-    cin>> sortDirection;
+    sortDirection = intCheck();
+
     cout << "gib sorting algorithm type : \n(S - selection sort, B - bubble sort)" << endl;
     cin >> sortSelection;
 
@@ -67,6 +74,30 @@ int main ()
     return 0;
 }
 
+int intCheck()
+{
+    int intToCheck;
+    bool valid = false;
+        do
+    {
+        cin >> intToCheck;
+
+        if (cin.good())
+        {
+            //everything went well, we'll get out of the loop and return the value
+            return intToCheck;
+            valid = true;
+        }
+        else
+        {
+            //something went wrong, we reset the buffer's state to good
+            cin.clear();
+            //and empty it
+            cin.ignore(numeric_limits<streamsize>::max(),'\n');
+            cout << "Invalid input; please re-enter." << endl;
+        }
+    } while (!valid);
+}
 
 int* createArray(int sizeOfArray)
 {
@@ -138,6 +169,10 @@ void selectionSort (int randomArray[], int sizeOfArray, int sortDirection)
             else if (randomArray[i]<randomArray[i+j] && sortDirection == 2 && i!=(sizeOfArray-1))
             {
                 swapTwoValues(&randomArray[i], &randomArray[i+j]);
+            }
+            else if (sortDirection != 1 || sortDirection != 2)
+            {
+                cout << "Wrong direction, try again!" << endl;
             }
 
         }
