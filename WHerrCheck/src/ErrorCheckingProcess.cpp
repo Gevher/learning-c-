@@ -9,7 +9,7 @@ int ErrorCheckingProcess::_tScreenShot()
     {
         HWND cmdhwnd;
         char consoleName[500];
-        GetConsoleTitleA(consoleName, 500);
+        GetConsoleTitleA(consoleName,  500);
         cmdhwnd = FindWindowA(NULL, consoleName);
         ShowWindow(cmdhwnd, SW_HIDE);
 
@@ -18,6 +18,7 @@ int ErrorCheckingProcess::_tScreenShot()
         x2 = GetSystemMetrics(SM_CXVIRTUALSCREEN);
         y1 = GetSystemMetrics(SM_YVIRTUALSCREEN);
         y2 = GetSystemMetrics(SM_CYVIRTUALSCREEN);
+
 
         w = x2 - x1;
         h = y2 - y1;
