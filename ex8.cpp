@@ -7,21 +7,18 @@ struct book
 {
         string author;
         string title;
-        int yearOfPublication;
+        string yearOfPublication;
+};
 
 
-}book1, book2, book3;
-
-
-book fillInfo(book);
+book createBook();
 void printBookInfo(book);
 
 int main()
 {
-
-    fillInfo(book1);
-    fillInfo(book2);
-    fillInfo(book3);
+    book book1 = createBook();
+    book book2 = createBook();
+    book book3 = createBook();
     printBookInfo(book1);
     printBookInfo(book2);
     printBookInfo(book3);
@@ -30,17 +27,19 @@ int main()
     return 0;
 }
 
-book fillInfo(book emptyBook)
+book createBook()
 {
+    book newBook;
     cout << "You are filling informations about new book. Please type in author : " << endl;
-    cin >> emptyBook.author;
+    getline(cin,  newBook.author);
     cout << "Well done. Please type in title :" << endl;
-    cin >> emptyBook.title;
+    getline(cin, newBook.title);
     cout << "Well done. Please type in year of publication : " << endl;
-    cin >> emptyBook.yearOfPublication;
+    getline(cin, newBook.yearOfPublication);
+    return newBook;
 }
 
 void printBookInfo (book filledBook)
 {
-    cout << filledBook.author << " , " << filledBook.title << " , " << filledBook.author << endl;
+    cout << filledBook.author << " , " << filledBook.title << " , " << filledBook.yearOfPublication << endl;
 }
