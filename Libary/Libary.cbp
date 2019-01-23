@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Libary.cpp" />
+		<Unit filename="Libary.h" />
+		<Unit filename="book.cpp" />
+		<Unit filename="book.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
