@@ -4,18 +4,17 @@
 	"book.h"
 	"Libary.h"
 
-1548605389 c:\users\admin\documents\github\learning-c-\libary\book.h
-	<string>
-
-1548605424 source:c:\users\admin\documents\github\learning-c-\libary\book.cpp
-	"book.h"
+1548617849 c:\users\admin\documents\github\learning-c-\libary\book.h
 	<string>
 	<iostream>
+
+1548617064 source:c:\users\admin\documents\github\learning-c-\libary\book.cpp
+	"book.h"
 
 1548608977 c:\users\admin\documents\github\learning-c-\libary\libary.h
 	"book.h"
 
-1548609573 source:c:\users\admin\documents\github\learning-c-\libary\libary.cpp
+1548609647 source:c:\users\admin\documents\github\learning-c-\libary\libary.cpp
 	"Libary.h"
 	<iostream>
 
