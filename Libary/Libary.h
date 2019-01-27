@@ -6,12 +6,16 @@
 class Libary
 {
 private:
-    Books books[5];
+    int maxAmountOfBooks;
     int bookCount;
+    Books * bookList;
 public:
     Libary();
+    Libary(int);
     void addBook (Books);
     Books getBook(int);
+    void printLibary();
+    ~Libary();
 };
 
 #endif // LIBARY_H_INCLUDED

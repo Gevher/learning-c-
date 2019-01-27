@@ -1,20 +1,21 @@
 # depslib dependency file v1.0
-1548275682 source:c:\users\admin\documents\github\learning-c-\libary\main.cpp
+1548609615 source:c:\users\admin\documents\github\learning-c-\libary\main.cpp
 	<iostream>
 	"book.h"
 	"Libary.h"
 
-1548273764 c:\users\admin\documents\github\learning-c-\libary\book.h
+1548605389 c:\users\admin\documents\github\learning-c-\libary\book.h
 	<string>
 
-1548273957 source:c:\users\admin\documents\github\learning-c-\libary\book.cpp
+1548605424 source:c:\users\admin\documents\github\learning-c-\libary\book.cpp
 	"book.h"
 	<string>
+	<iostream>
 
-1548275040 c:\users\admin\documents\github\learning-c-\libary\libary.h
+1548608977 c:\users\admin\documents\github\learning-c-\libary\libary.h
 	"book.h"
 
-1548275742 source:c:\users\admin\documents\github\learning-c-\libary\libary.cpp
+1548609573 source:c:\users\admin\documents\github\learning-c-\libary\libary.cpp
 	"Libary.h"
 	<iostream>
 

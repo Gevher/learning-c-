@@ -6,16 +6,35 @@ using namespace std;
 
 int main()
 {
-    Books book1, book2;
-    Libary libary1;
+    Libary lib1(15);
+    Books books[15];
 
-    book1.setAuthor("Dupa");
-    book1.setTitle("Krawê¿nik");
-    book1.setYearOfRealse("1889");
+    for(int i = 0; i<15; i++)
+        {
 
-    libary1.addBook(book1);
+            books[i].setAuthor(" jebaÄ‡");
+            books[i].setTitle(" policje");
+            books[i].setYearOfRealse("997");
+        }
 
-    book2 = libary1.getBook(0);
-    cout << book2.getAuthor() << " , " << book2.getTitile() << " , " << book2.getYearOfRealse() << endl;
+
+    cout<< "hi1" << endl;
+    for(int i=0; i < 15; i++)
+
+        {
+            cout<< "hi2" << endl;
+            lib1.addBook(books[i]);
+
+        }
+
+    for(int i = 0; i< 15; i++)
+        {
+            Books tempBook1;
+            tempBook1 = lib1.getBook(i);
+            tempBook1.printEverything();
+        }
+
+    lib1.printLibary();
+
     return 0;
 }
