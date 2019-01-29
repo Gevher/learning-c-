@@ -5,9 +5,9 @@
 
 Libary::Libary()
 {
-    bookCount = 0;
     this->maxAmountOfBooks = 10;
     this->bookList = new Books[maxAmountOfBooks];
+    bookCount = 0;
 }
 
 Libary::Libary(int maxAmountOfBooks)
@@ -27,7 +27,7 @@ void Libary::addBook(Books someBook)
         }
 
     else
-        std::cout << "Too much books in the libary" << std::endl;
+        std::cout << "Too much books in the library" << std::endl;
     bookCount++;
 }
 
