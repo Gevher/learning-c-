@@ -18,9 +18,9 @@
         cnt++;
     }
 
-    void Books::printEverything()
+    void Books::printEverything() const
     {
-        std::cout << author << " , " << title << " , " << yearOfRealse << std::endl;
+        std::cout << author << " , " << title << " , " << yearOfRealse << " , " << id << std::endl;
     }
 
 

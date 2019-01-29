@@ -19,7 +19,7 @@ public:
     void setAuthor(std::string author)                  {        this->author = author;                 };
     void setTitle(std::string title)                    {        this->title = title;                    };
     void setYearOfRealse(std::string yearOfRealse)      {        this->yearOfRealse = yearOfRealse;      };
-    void printEverything();
+    void printEverything() const;
     std::string getAuthor ()        const {    return author;          };
     std::string getTitile ()        const {    return title;           };
     std::string getYearOfRealse ()  const {    return yearOfRealse;    };
