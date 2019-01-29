@@ -16,6 +16,7 @@ class Books
 public:
     Books();
     Books(std::string, std::string, std::string);
+    Books(const Books &);
     void setAuthor(std::string author)                  {        this->author = author;                 };
     void setTitle(std::string title)                    {        this->title = title;                    };
     void setYearOfRealse(std::string yearOfRealse)      {        this->yearOfRealse = yearOfRealse;      };

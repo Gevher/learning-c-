@@ -18,6 +18,15 @@
         cnt++;
     }
 
+    Books::Books(const Books & incomingBook)
+    {
+        this->author = incomingBook.author;
+        this->title = incomingBook.title;
+        this->yearOfRealse = incomingBook.yearOfRealse;
+        id = cnt;
+        cnt++;
+    }
+
     void Books::printEverything() const
     {
         std::cout << author << " , " << title << " , " << yearOfRealse << " , " << id << std::endl;
