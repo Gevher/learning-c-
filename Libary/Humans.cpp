@@ -43,5 +43,5 @@ Books Borrower::returnBook(int bookNr)
 
 Books Borrower::returnBook()
 {
-    return this-booksList[this->booksCount--];
+    return this->booksList[this->booksCount];
 }

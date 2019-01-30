@@ -31,9 +31,15 @@ public:
     Borrower(std::string, std::string, int);
     Borrower(std::string, std::string);
     ~Borrower();
+    Borrower& operator = (Borrower &) = delete;
     void getBook(Books);
     Books returnBook(int);
     Books returnBook();
+};
+
+class Libarian : public Borrower
+{
+
 };
 
 #endif // HUMANS_H_INCLUDED

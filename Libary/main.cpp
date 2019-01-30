@@ -21,7 +21,6 @@ int main()
     bok3.printEverything();
     bok4.printEverything();
     bok5.printEverything();
-
     cout<< endl << endl << newUser.getLastName() << " " << newUser.getName() << endl;
 
     return 0;
